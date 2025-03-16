@@ -15,7 +15,7 @@ public class Room implements SmartDevice {
 
     @Override
     public void turnOn() {
-        System.out.println("Turning ON all devices in " + name);
+        System.out.println(" Включаем комнату " + name);
         for (SmartDevice device : devices) {
             device.turnOn();
         }
@@ -23,10 +23,14 @@ public class Room implements SmartDevice {
 
     @Override
     public void turnOff() {
-        System.out.println("Turning OFF all devices in " + name);
+        System.out.println(" Выключаем комнату " + name);
         for (SmartDevice device : devices) {
             device.turnOff();
         }
     }
-}
 
+    @Override
+    public String getStatus() {
+        return "Комната " + name + " содержит " + devices.size() + " устройств";
+    }
+}
