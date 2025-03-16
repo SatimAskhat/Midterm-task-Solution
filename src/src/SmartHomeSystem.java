@@ -9,21 +9,21 @@ public class SmartHomeSystem {
     }
 
     public void turnAllOn() {
-        System.out.println("🔵 Включаем все устройства...");
+        System.out.println(" Turn on all devices...");
         for (SmartDevice device : devices) {
             device.turnOn();
         }
     }
 
     public void turnAllOff() {
-        System.out.println("🔴 Выключаем все устройства...");
+        System.out.println(" Turn off all devices...");
         for (SmartDevice device : devices) {
             device.turnOff();
         }
     }
 
     public void showStatus() {
-        System.out.println("📊 Статус системы: " + devices.size() + " устройств подключено.");
+        System.out.println(" System status:" + devices.size() + " devices are connected.");
     }
 }
 
