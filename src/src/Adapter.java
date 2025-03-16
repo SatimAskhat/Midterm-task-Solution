@@ -1,13 +1,3 @@
-class LegacyLockSystem {
-    public void activateLock() {
-        System.out.println("Legacy Lock System: Locking doors");
-    }
-
-    public void deactivateLock() {
-        System.out.println("Legacy Lock System: Unlocking doors");
-    }
-}
-
 public class Adapter implements SmartDevice {
     private LegacyLockSystem legacyLock;
 
@@ -17,12 +7,16 @@ public class Adapter implements SmartDevice {
 
     @Override
     public void turnOn() {
-        legacyLock.activateLock();
+        legacyLock.unlock();
     }
 
     @Override
     public void turnOff() {
-        legacyLock.deactivateLock();
+        legacyLock.lock();
+    }
+
+    @Override
+    public String getStatus() {
+        return legacyLock.getStatus();
     }
 }
-
