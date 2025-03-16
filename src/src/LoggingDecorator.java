@@ -5,14 +5,13 @@ public class LoggingDecorator extends Decorator {
 
     @Override
     public void turnOn() {
-        System.out.println("Logging: Turning on device");
+        System.out.println(" Лог: Включение устройства");
         super.turnOn();
     }
 
     @Override
     public void turnOff() {
-        System.out.println("Logging: Turning off device");
+        System.out.println(" Лог: Выключение устройства");
         super.turnOff();
     }
 }
-
