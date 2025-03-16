@@ -2,7 +2,6 @@
 ## In this project, I developed a smart home control system using several key design patterns. The main goal was to create a convenient way to manage different devices like lights, locks, and sensors.
 
 
-
 ## 🔧 Design Patterns Used:
 **Composite – Allows grouping devices (e.g., a room) and managing them together.
 Decorator – Extends device functionality without modifying the original code, such as adding logging.
