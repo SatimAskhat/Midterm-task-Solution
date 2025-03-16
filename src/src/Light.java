@@ -1,23 +1,25 @@
-interface SmartDevice {
-    void turnOn();
-    void turnOff();
-}
-
 public class Light implements SmartDevice {
-    private String name;
+    private String location;
+    private boolean isOn;
 
-    public Light(String name) {
-        this.name = name;
+    public Light(String location) {
+        this.location = location;
     }
 
     @Override
     public void turnOn() {
-        System.out.println(name + " Light is ON");
+        isOn = true;
+        System.out.println(" Свет в " + location + " включен");
     }
 
     @Override
     public void turnOff() {
-        System.out.println(name + " Light is OFF");
+        isOn = false;
+        System.out.println(" Свет в " + location + " выключен");
+    }
+
+    @Override
+    public String getStatus() {
+        return "Свет в " + location + " - " + (isOn ? "Включен" : "Выключен");
     }
 }
-
