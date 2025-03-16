@@ -1,11 +1,3 @@
-interface SmartHomeFactory {
-    Light createLight(String name);
+public abstract class SmartHomeFactory {
+    public abstract Light createLight(String location);
 }
-
-public class BasicSmartHomeFactory implements SmartHomeFactory {
-    @Override
-    public Light createLight(String name) {
-        return new Light(name);
-    }
-}
-
