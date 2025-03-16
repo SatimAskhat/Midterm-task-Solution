@@ -1,18 +1,22 @@
 public abstract class Decorator implements SmartDevice {
-    protected SmartDevice decoratedDevice;
+    protected SmartDevice device;
 
     public Decorator(SmartDevice device) {
-        this.decoratedDevice = device;
+        this.device = device;
     }
 
     @Override
     public void turnOn() {
-        decoratedDevice.turnOn();
+        device.turnOn();
     }
 
     @Override
     public void turnOff() {
-        decoratedDevice.turnOff();
+        device.turnOff();
+    }
+
+    @Override
+    public String getStatus() {
+        return device.getStatus();
     }
 }
-
